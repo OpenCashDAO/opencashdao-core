@@ -1,0 +1,28 @@
+{
+	"entryPoints": [ "lib/index.ts" ],
+	"out": "public/",
+	"plugin": [ "typedoc-plugin-coverage" ],
+	"visibilityFilters":
+	{
+		"protected": false,
+		"private": false,
+		"inherited": false,
+		"external": false
+	},
+	"groupOrder": [ "Classes" ],
+	"exclude":
+	[
+	],
+	"navigation":
+	{
+		"includeCategories": true,
+		"includeGroups": true
+	},
+	"navigationLinks":
+	{
+		"Contract": "https://github.com/OpenCashDAO/opencashdao-contracts",
+		"Examples": "https://github.com/OpenCashDAO/opencashdao.js/tree/main/examples",
+		"|": "",
+		"NPM": "https://www.npmjs.com/package/opencashdao",
+	}
+}

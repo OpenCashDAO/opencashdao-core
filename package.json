@@ -1,0 +1,62 @@
+{
+  "name": "@opencashdao/core",
+  "version": "0.0.1",
+  "description": "OpenCashDAO is a decentralized autonomous organization (DAO) template for the Bitcoin Cash Blockchain.",
+  "type": "module",
+  "exports": {
+    ".": "./build/lib/index.js"
+  },
+  "types": "./build/lib/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf build",
+    "docs": "typedoc --hideGenerator --categorizeByGroup",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "prepare": "npm run build",
+    "jest": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest",
+    "lint": "eslint . --ext .ts",
+    "syntax": "tsc --noEmit"
+  },
+  "files": [
+    "build/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCashDAO/opencashdao-core.git"
+  },
+  "author": "Kuldeep Singh <kuldeepbb.grewal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenCashDAO/opencashdao-core/issues"
+  },
+  "homepage": "https://github.com/OpenCashDAO/opencashdao-core#readme",
+  "keywords": [
+    "bitcoin cash",
+    "BCH",
+    "smart contracts"
+  ],
+  "dependencies": {
+    "@bitauth/libauth": "^3.1.0-next.4",
+    "@electrum-cash/protocol": "^2.2.1-r8564577559",
+    "@opencashdao/contracts": "^0.0.1",
+    "cashscript": "^0.11.0-next.3",
+    "electrum-cash": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.27.9",
+    "typedoc-plugin-coverage": "^3.4.1",
+    "typescript": "^5.5.3"
+  }
+}
